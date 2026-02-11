@@ -1,0 +1,41 @@
+{
+  "model_info": {
+    "architecture": "1D CNN (TinyML optimized)",
+    "input_shape": [
+      101,
+      13
+    ],
+    "num_classes": 3,
+    "total_parameters": 13219,
+    "training_samples": 1082,
+    "test_samples": 271
+  },
+  "training_config": {
+    "batch_size": 32,
+    "epochs": 34,
+    "initial_learning_rate": 0.001,
+    "optimizer": "Adam"
+  },
+  "performance": {
+    "train_accuracy": 0.9214417934417725,
+    "val_accuracy": 0.9188191890716553,
+    "test_accuracy": 0.966789667896679,
+    "best_val_accuracy": 0.9667896628379822
+  },
+  "model_sizes": {
+    "keras_model_kb": 51.63671875,
+    "tflite_float32_kb": 59.671875,
+    "tflite_int8_kb": 28.0078125,
+    "compression_ratio": 2.130543933054393
+  },
+  "deployment_ready": true,
+  "esp32_compatible": true,
+  "files": {
+    "keras_model": "best_model.keras",
+    "tflite_model": "aeroguard_model.tflite",
+    "tflite_quantized": "aeroguard_model_quantized.tflite",
+    "label_mapping": "label_mapping.json",
+    "training_history": "training_history.png",
+    "confusion_matrix": "confusion_matrix.png"
+  }
+}
